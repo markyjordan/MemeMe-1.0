@@ -20,11 +20,20 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
 
     // MARK: Actions
     
-    // 
+    //
     @IBAction func selectImage(_ sender: Any) {
         let imageSelectorVC = UINavigationController()
         imageSelectorVC.delegate = self
         present(imageSelectorVC, animated: true, completion: nil)
+    }
+    
+    // implement the UIImagePickerControllerDelegate methods
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        dismiss(animated: true, completion: nil )
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
     }
 
 }
