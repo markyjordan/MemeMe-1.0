@@ -18,7 +18,14 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
 
     }
 
+    // MARK: Actions
     
+    // 
+    @IBAction func selectImage(_ sender: Any) {
+        let imageSelectorVC = UINavigationController()
+        imageSelectorVC.delegate = self
+        present(imageSelectorVC, animated: true, completion: nil)
+    }
 
 }
 
