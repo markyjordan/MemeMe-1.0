@@ -20,7 +20,11 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem image="camera.fill" catalog="system" id="k9r-Ic-ggc"/>
-                                    <barButtonItem title="Camera Roll" id="cg2-bH-fNe" userLabel="Camera Roll"/>
+                                    <barButtonItem title="Camera Roll" id="cg2-bH-fNe" userLabel="Camera Roll">
+                                        <connections>
+                                            <action selector="selectImage:" destination="BYZ-38-t0r" id="wXz-cU-IRB"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>

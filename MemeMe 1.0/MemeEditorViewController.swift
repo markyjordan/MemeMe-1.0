@@ -13,16 +13,21 @@ import UIKit
 
 class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    // MARK: Outlets
+    
+    
+    
+    // MARK: Life Cycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
-
+    
     // MARK: Actions
     
-    //
     @IBAction func selectImage(_ sender: Any) {
-        let imageSelectorVC = UINavigationController()
+        let imageSelectorVC = UIImagePickerController()
         imageSelectorVC.delegate = self
         present(imageSelectorVC, animated: true, completion: nil)
     }
