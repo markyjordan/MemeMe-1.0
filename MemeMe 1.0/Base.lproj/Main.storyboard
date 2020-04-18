@@ -22,7 +22,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="FI2-co-foM"/>
                                     <barButtonItem image="camera.fill" catalog="system" id="k9r-Ic-ggc"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Oof-AU-rV5"/>
-                                    <barButtonItem title="Camera Roll" id="cg2-bH-fNe" userLabel="Camera Roll">
+                                    <barButtonItem title="Photos" id="cg2-bH-fNe" userLabel="Camera Roll">
                                         <connections>
                                             <action selector="selectImage:" destination="BYZ-38-t0r" id="wXz-cU-IRB"/>
                                         </connections>

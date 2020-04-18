@@ -15,12 +15,15 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
 
     // MARK: Outlets
     
+    // initialize delegate objects
     
     
     // MARK: Life Cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // set the delegates
         
     }
     
