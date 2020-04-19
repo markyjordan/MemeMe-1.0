@@ -15,6 +15,8 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
 
     // MARK: Outlets
     
+    @IBOutlet weak var imagePickerView: UIView!
+    
     // initialize delegate objects
     
     
