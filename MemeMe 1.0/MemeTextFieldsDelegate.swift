@@ -18,7 +18,7 @@ class MemeTextFieldsDelegate: NSObject, UITextFieldDelegate {
     // MARK: UITextFieldDelegate Methods
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        <#code#>
+        textField.text = ""
     }
     
     // dismiss the keyboard when user presses return key
