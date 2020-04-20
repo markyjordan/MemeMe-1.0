@@ -16,6 +16,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     // MARK: Outlets
     
     @IBOutlet weak var photoImageView: UIImageView!
+    @IBOutlet weak var cameraButton: UIBarButtonItem!
     
     // MARK: Life Cycle
 
@@ -23,6 +24,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         super.viewDidLoad()
         
     }
+
     
     // MARK: Actions
     
@@ -50,7 +52,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         present(imagePickerVC, animated: true, completion: nil)
     }
     
-    // implement the UIImagePickerControllerDelegate methods
+    // MARK: UIImagePickerControllerDelegate Methods
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let selectedImage = info[.originalImage] as? UIImage {
@@ -58,15 +60,11 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
             // set photoImageView to display the selected image
             photoImageView.image = selectedImage
         }
-        // dismiss the picker
         dismiss(animated: true, completion: nil )
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        
-        // dismiss the picker upon user cancellation
         dismiss(animated: true, completion: nil)
     }
-
 }
 
