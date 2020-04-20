@@ -26,11 +26,28 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     
     // MARK: Actions
     
-    @IBAction func selectImage(_ sender: Any) {
-        let imageSelectorVC = UIImagePickerController()
+    @IBAction func selectImageFromAlbum(_ sender: Any) {
+        let imagePickerVC = UIImagePickerController()
+        
         // set the delegate(s)
-        imageSelectorVC.delegate = self
-        present(imageSelectorVC, animated: true, completion: nil)
+        imagePickerVC.delegate = self
+        
+        // specify sourceType
+        imagePickerVC.sourceType = .photoLibrary
+        
+        present(imagePickerVC, animated: true, completion: nil)
+    }
+    
+    @IBAction func selectImageFromCamera(_ sender: Any) {
+        let imagePickerVC = UIImagePickerController()
+        
+        // set the delegate(s)
+        imagePickerVC.delegate = self
+        
+        // specify sourceType
+        imagePickerVC.sourceType = .camera
+        
+        present(imagePickerVC, animated: true, completion: nil)
     }
     
     // implement the UIImagePickerControllerDelegate methods
@@ -46,6 +63,8 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        
+        // dismiss the picker upon user cancellation
         dismiss(animated: true, completion: nil)
     }
 
