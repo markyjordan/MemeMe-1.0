@@ -34,15 +34,16 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     }
     
     // implement the UIImagePickerControllerDelegate methods
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let selectedImage = info[.originalImage] as? UIImage {
+            
             // set photoImageView to display the selected image
             photoImageView.image = selectedImage
         }
         // dismiss the picker
         dismiss(animated: true, completion: nil )
     }
-    
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
