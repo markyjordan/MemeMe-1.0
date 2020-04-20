@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E20553C4244D77BD0059CA96 /* MemeTextFieldsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20553C3244D77BD0059CA96 /* MemeTextFieldsDelegate.swift */; };
 		E2DB6BBE2423497A00FB70D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DB6BBD2423497A00FB70D5 /* AppDelegate.swift */; };
 		E2DB6BC02423497A00FB70D5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DB6BBF2423497A00FB70D5 /* SceneDelegate.swift */; };
 		E2DB6BC22423497A00FB70D5 /* MemeEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DB6BC12423497A00FB70D5 /* MemeEditorViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E20553C3244D77BD0059CA96 /* MemeTextFieldsDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeTextFieldsDelegate.swift; sourceTree = "<group>"; };
 		E2DB6BBA2423497A00FB70D5 /* MemeMe 1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MemeMe 1.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2DB6BBD2423497A00FB70D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2DB6BBF2423497A00FB70D5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				E2DB6BBD2423497A00FB70D5 /* AppDelegate.swift */,
 				E2DB6BBF2423497A00FB70D5 /* SceneDelegate.swift */,
 				E2DB6BC12423497A00FB70D5 /* MemeEditorViewController.swift */,
+				E20553C3244D77BD0059CA96 /* MemeTextFieldsDelegate.swift */,
 				E2DB6BC32423497A00FB70D5 /* Main.storyboard */,
 				E2DB6BC82423497C00FB70D5 /* LaunchScreen.storyboard */,
 				E2DB6BC62423497C00FB70D5 /* Assets.xcassets */,
@@ -140,6 +143,7 @@
 			files = (
 				E2DB6BC22423497A00FB70D5 /* MemeEditorViewController.swift in Sources */,
 				E2DB6BBE2423497A00FB70D5 /* AppDelegate.swift in Sources */,
+				E20553C4244D77BD0059CA96 /* MemeTextFieldsDelegate.swift in Sources */,
 				E2DB6BC02423497A00FB70D5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
