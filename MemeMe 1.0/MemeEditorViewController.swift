@@ -28,6 +28,10 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         // set textAlignment property of textfields to center
         topTextField.textAlignment = .center
         bottomTextField.textAlignment = .center
+        
+        // set default text in textfields
+        topTextField.text = "Top"
+        bottomTextField.text = "Bottom"
     }
 
     override func viewWillAppear(_ animated: Bool) {
