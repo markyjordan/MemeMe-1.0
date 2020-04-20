@@ -13,4 +13,17 @@ import UIKit
 
 class MemeTextFieldsDelegate: NSObject, UITextFieldDelegate {
 
+    
+    
+    // MARK: UITextFieldDelegate Methods
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        <#code#>
+    }
+    
+    // dismiss the keyboard when user presses return key
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }
