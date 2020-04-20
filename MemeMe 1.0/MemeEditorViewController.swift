@@ -25,6 +25,12 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        // check if camera is available
+        cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
+    }
     
     // MARK: Actions
     
