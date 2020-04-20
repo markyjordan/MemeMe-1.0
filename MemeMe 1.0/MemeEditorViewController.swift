@@ -17,6 +17,8 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var cameraButton: UIBarButtonItem!
+    @IBOutlet weak var topTextField: UITextField!
+    @IBOutlet weak var bottomTextField: UITextField!
     
     // MARK: Life Cycle
 
