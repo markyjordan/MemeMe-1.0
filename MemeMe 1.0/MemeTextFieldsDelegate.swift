@@ -17,6 +17,7 @@ class MemeTextFieldsDelegate: NSObject, UITextFieldDelegate {
     
     // MARK: UITextFieldDelegate Methods
     
+    // clear the default text when user taps the text field to begin editing
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.text = ""
     }
