@@ -41,6 +41,10 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         // set default text in textfields
         topTextField.text = "Top"
         bottomTextField.text = "Bottom"
+        
+        // set default text attributes
+        topTextField.defaultTextAttributes = memeTextAttributes
+        bottomTextField.defaultTextAttributes = memeTextAttributes
     }
 
     override func viewWillAppear(_ animated: Bool) {
