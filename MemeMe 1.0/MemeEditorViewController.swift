@@ -26,7 +26,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         NSAttributedString.Key.strokeColor: UIColor(white: 0.0, alpha: 1.0),
         NSAttributedString.Key.foregroundColor: UIColor(white: 1.0, alpha: 1.0),
         NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
-        NSAttributedString.Key.strokeWidth: NSNumber(3.0)
+        NSAttributedString.Key.strokeWidth: NSNumber(5.3)
     ]
     
     // MARK: Life Cycle
