@@ -20,6 +20,15 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     @IBOutlet weak var topTextField: UITextField!
     @IBOutlet weak var bottomTextField: UITextField!
     
+    // MARK: Properties
+    
+    let memeTextAttributes: [NSAttributedString.Key: Any] = [
+        NSAttributedString.Key.strokeColor: UIColor(white: 0.0, alpha: 1.0),
+        NSAttributedString.Key.foregroundColor: UIColor(white: 1.0, alpha: 1.0),
+        NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
+        NSAttributedString.Key.strokeWidth: NSNumber(3.0)
+    ]
+    
     // MARK: Life Cycle
 
     override func viewDidLoad() {
