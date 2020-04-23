@@ -24,8 +24,8 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     
     let memeTextAttributes: [NSAttributedString.Key: Any] = [
         
-        NSAttributedString.Key.strokeColor: UIColor(white: 0.0, alpha: 1.0),
-        NSAttributedString.Key.foregroundColor: UIColor(white: 1.0, alpha: 1.0),
+        NSAttributedString.Key.strokeColor: UIColor(white: 0.0, alpha: 1.0), // UIColor = black
+        NSAttributedString.Key.foregroundColor: UIColor(white: 1.0, alpha: 1.0), // UIColor = white
         NSAttributedString.Key.font: UIFont(name: "Impact", size: 40)!,
         NSAttributedString.Key.strokeWidth: NSNumber(5.0)
     ]
@@ -45,8 +45,8 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         self.bottomTextField.delegate = memeTextFieldDelegate
         
         // set default text in textfields
-        topTextField.text = "TOP"
-        bottomTextField.text = "BOTTOM"
+        topTextField.text = "TAP TO EDIT TOP"
+        bottomTextField.text = "TAP TO EDIT BOTTOM"
         
         // set default text attributes
         topTextField.defaultTextAttributes = memeTextAttributes
