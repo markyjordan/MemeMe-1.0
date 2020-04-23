@@ -23,6 +23,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     // MARK: Properties
     
     let memeTextAttributes: [NSAttributedString.Key: Any] = [
+        
         NSAttributedString.Key.strokeColor: UIColor(white: 0.0, alpha: 1.0),
         NSAttributedString.Key.foregroundColor: UIColor(white: 1.0, alpha: 1.0),
         NSAttributedString.Key.font: UIFont(name: "Impact", size: 40)!,
@@ -36,6 +37,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     // MARK: Life Cycle
 
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
         // set the delegates
@@ -56,15 +58,28 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     }
 
     override func viewWillAppear(_ animated: Bool) {
+        
         super.viewDidAppear(animated)
         
         // check if camera is available
         cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
+        
+        // subscribe to keyboard notifications
+        subscribeToKeyboardNotifications()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        
+        super.viewWillDisappear(animated)
+        
+        // unsubsribe from keyboard notifications
+        unsubscribeFromKeyboardNotifications()
     }
     
     // MARK: Actions
     
     @IBAction func selectImageFromAlbum(_ sender: Any) {
+        
         let imagePickerVC = UIImagePickerController()
         
         // set the delegate(s)
@@ -77,6 +92,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     }
     
     @IBAction func selectImageFromCamera(_ sender: Any) {
+        
         let imagePickerVC = UIImagePickerController()
         
         // set the delegate(s)
@@ -101,6 +117,30 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    // MARK: Keyboard Subscription Functions
+    
+    func subscribeToKeyboardNotifications() {
+
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+    }
+
+    func unsubscribeFromKeyboardNotifications() {
+
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+    }
+    
+    @objc func keyboardWillShow(_ notification: Notification) {
+        
+        view.frame.origin.y -= getKeyboardHeight(notification)
+    }
+
+    func getKeyboardHeight(_ notification: Notification) -> CGFloat {
+
+        let userInfo = notification.userInfo
+        let keyboardSize = userInfo![UIResponder.keyboardFrameEndUserInfoKey] as! NSValue // of CGRect
+        return keyboardSize.cgRectValue.height
     }
 }
 
