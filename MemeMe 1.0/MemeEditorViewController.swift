@@ -121,8 +121,9 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         dismiss(animated: true, completion: nil)
     }
     
-    // MARK: Keyboard Subscription Functions
+    // MARK: NSNotification Functions
     
+    // observers
     func subscribeToKeyboardWillShowNotifications() {
 
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
@@ -143,7 +144,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 
-    
+    // implement functions to act on notifications
     @objc func keyboardWillShow(_ notification: Notification) {
         
         view.frame.origin.y -= getKeyboardHeight(notification)
