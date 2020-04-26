@@ -167,6 +167,8 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     func generateMemedImage() -> UIImage {
 
         // hide toolbar and navigation bar
+        navigationBar.isHidden = true
+        toolBar.isHidden = true
         
         // render view to an image
         UIGraphicsBeginImageContext(self.view.frame.size)
@@ -175,6 +177,8 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         UIGraphicsEndImageContext()
         
         // show toolbar and navigation bar
+        navigationBar.isHidden = false
+        toolBar.isHidden = false
 
         return memedImage
     }
