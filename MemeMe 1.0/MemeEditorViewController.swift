@@ -16,12 +16,12 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     // MARK: Outlets
     
     @IBOutlet weak var photoImageView: UIImageView!
-    @IBOutlet weak var cameraButton: UIBarButtonItem!
     @IBOutlet weak var topTextField: UITextField!
     @IBOutlet weak var bottomTextField: UITextField!
+    @IBOutlet weak var cameraButton: UIBarButtonItem!
+    @IBOutlet weak var shareButton: UIBarButtonItem!
     @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var toolBar: UIToolbar!
-    @IBOutlet weak var shareButton: UIBarButtonItem!
     
     // MARK: Properties
     
