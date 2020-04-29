@@ -211,5 +211,14 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         self.meme = meme
     }
     
-    
+    @IBAction func shareMemedImage() {
+        
+        // generate a memed image
+        let memeToShare = generateMemedImage()
+        let activity = UIActivityViewController(activityItems: [memeToShare], applicationActivities: nil)
+        
+        activity.completionWithItemsHandler = {
+        
+        
+    }
 }

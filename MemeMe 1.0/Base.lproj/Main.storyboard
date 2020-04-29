@@ -33,7 +33,11 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Title" id="cna-NE-bl7">
-                                        <barButtonItem key="leftBarButtonItem" title="Item" image="square.and.arrow.up" catalog="system" id="Mtq-W5-Cza"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="square.and.arrow.up" catalog="system" id="Mtq-W5-Cza">
+                                            <connections>
+                                                <action selector="shareMemedImage" destination="BYZ-38-t0r" id="crP-J7-stE"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -44,7 +48,7 @@
                                 </constraints>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="FI2-co-foM"/>
-                                    <barButtonItem image="camera.fill" catalog="system" id="k9r-Ic-ggc">
+                                    <barButtonItem image="camera" catalog="system" id="k9r-Ic-ggc">
                                         <connections>
                                             <action selector="selectImageFromCamera:" destination="BYZ-38-t0r" id="Kte-WJ-yAE"/>
                                         </connections>
@@ -100,7 +104,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="camera.fill" catalog="system" width="128" height="96"/>
+        <image name="camera" catalog="system" width="128" height="96"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
     </resources>
 </document>
