@@ -136,7 +136,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         return keyboardSize.cgRectValue.height
     }
     
-    // MARK: Image Selection
+    // MARK: Image Picker
     
     @IBAction func selectImageFromAlbum(_ sender: Any) {
         
@@ -200,9 +200,10 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         return memedImage
     }
     
-    func saveMemedImage() {
+    func saveMemedImage(memedImage: UIImage) {
         
-        // Create the meme
+        // generate the meme
         let meme = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: photoImageView.image!, memedImage: memedImage)
+        self.meme = meme
     }
 }
