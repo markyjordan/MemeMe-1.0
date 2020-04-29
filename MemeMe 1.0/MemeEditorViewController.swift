@@ -148,6 +148,9 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         // specify sourceType
         imagePickerVC.sourceType = .photoLibrary
         
+        // enable share button
+        shareButton.isEnabled = true
+        
         present(imagePickerVC, animated: true, completion: nil)
     }
     
@@ -160,6 +163,9 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         
         // specify sourceType
         imagePickerVC.sourceType = .camera
+        
+        // enable share button
+        shareButton.isEnabled = true
         
         present(imagePickerVC, animated: true, completion: nil)
     }
@@ -178,8 +184,6 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }
-    
-    
     
     func generateMemedImage() -> UIImage {
 
@@ -206,4 +210,6 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         let meme = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: photoImageView.image!, memedImage: memedImage)
         self.meme = meme
     }
+    
+    
 }
