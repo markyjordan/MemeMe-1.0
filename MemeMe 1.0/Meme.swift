@@ -13,10 +13,4 @@ struct Meme {
     var bottomTextField: String!
     var originalImage: UIImage!
     var memedImage: UIImage!
-    
-    func save() {
-        
-        // Create the meme
-        let meme = Meme(topTextField: topTextField.text!, bottomTextField: bottomTextField.text!, originalImage: originalImage.image!, memedImage: memedImage)
-    }
 }

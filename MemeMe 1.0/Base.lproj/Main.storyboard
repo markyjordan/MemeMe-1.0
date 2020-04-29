@@ -21,7 +21,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Fh-OW-YAE">
-                                <rect key="frame" x="20" y="259" width="335" height="34"/>
+                                <rect key="frame" x="20" y="269" width="335" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
@@ -72,11 +72,13 @@
                             <constraint firstItem="Rfl-gq-d9E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="bZ1-YW-awn"/>
                             <constraint firstItem="pL5-xb-WIf" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="cUU-FA-hyW"/>
                             <constraint firstItem="Rfl-gq-d9E" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="e19-cJ-U5x"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pL5-xb-WIf" secondAttribute="bottom" id="e6F-jT-N27"/>
                             <constraint firstItem="H6s-s0-8VZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="eGZ-Bv-KQa"/>
                             <constraint firstItem="H6s-s0-8VZ" firstAttribute="centerX" secondItem="pL5-xb-WIf" secondAttribute="centerX" id="iv7-Pk-5Og"/>
                             <constraint firstItem="H6s-s0-8VZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kay-re-p6F"/>
                             <constraint firstItem="9Fh-OW-YAE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qeI-He-scA"/>
-                            <constraint firstItem="9Fh-OW-YAE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="215" id="txg-Qe-73Z"/>
+                            <constraint firstItem="9Fh-OW-YAE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="225" id="txg-Qe-73Z"/>
+                            <constraint firstItem="pL5-xb-WIf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uIu-gw-JJD"/>
                             <constraint firstItem="9Fh-OW-YAE" firstAttribute="centerX" secondItem="pL5-xb-WIf" secondAttribute="centerX" id="vv4-cE-DG8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="H6s-s0-8VZ" secondAttribute="trailing" constant="20" id="yEY-2M-RUj"/>
                         </constraints>

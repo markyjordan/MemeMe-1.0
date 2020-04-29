@@ -13,7 +13,7 @@ import UIKit
 
 class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
-    // MARK: Outlets
+    // MARK: Outlets/Properties
     
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var topTextField: UITextField!
@@ -22,8 +22,6 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     @IBOutlet weak var shareButton: UIBarButtonItem!
     @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var toolBar: UIToolbar!
-    
-    // MARK: Properties
     
     let memeTextAttributes: [NSAttributedString.Key: Any] = [
         
@@ -182,5 +180,11 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         toolBar.isHidden = false
 
         return memedImage
+    }
+    
+    func saveMemedImage() {
+        
+        // Create the meme
+        let meme = Meme(topTextField: topTextField.text!, bottomTextField: bottomTextField.text!, originalImage: originalImage.image!, memedImage: memedImage)
     }
 }
