@@ -60,8 +60,8 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
 //        topTextField.textAlignment = .center
 //        bottomTextField.textAlignment = .center
         
-        initializeTextField(textField: topTextField, text: "TAP TO EDIT TOP")
-        initializeTextField(textField: bottomTextField, text: "TAP TO EDIT BOTTOM")
+        initializeTextField(textField: topTextField, text: "TAP TO EDIT TOP TEXT")
+        initializeTextField(textField: bottomTextField, text: "TAP TO EDIT BOTTOM TEXT")
         
         // disable share button
         shareButton.isEnabled = false
