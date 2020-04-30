@@ -21,6 +21,7 @@
                                 <items>
                                     <navigationItem id="3ej-WM-iIK">
                                         <barButtonItem key="leftBarButtonItem" title="Item" image="square.and.arrow.up" catalog="system" id="X0x-3U-G6f">
+                                            <color key="tintColor" red="0.0" green="0.71192407608032227" blue="0.9104611873626709" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
                                                 <action selector="shareMemedImage" destination="BYZ-38-t0r" id="TtM-dC-vMn"/>
                                             </connections>
@@ -33,34 +34,37 @@
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="92s-B2-n29"/>
                                     <barButtonItem title="Item" image="camera" catalog="system" id="jYI-fE-gLL">
+                                        <color key="tintColor" red="0.0" green="0.71192407608032227" blue="0.9104611873626709" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <action selector="selectImageFromCamera:" destination="BYZ-38-t0r" id="6B2-Cw-43l"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="fo4-cv-ZC7"/>
                                     <barButtonItem title="Photos" id="IM3-MI-X7S">
+                                        <color key="tintColor" red="0.0" green="0.71192407608032227" blue="0.9104611873626709" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <action selector="selectImageFromAlbum:" destination="BYZ-38-t0r" id="l9j-Cb-3Ox"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="rz4-wM-ne6"/>
                                 </items>
+                                <color key="barTintColor" red="0.099754296243190765" green="0.14997085928916931" blue="0.18371099233627319" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </toolbar>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VMW-ez-JJR">
                                 <rect key="frame" x="0.0" y="88" width="375" height="641"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y8W-PC-bhx">
-                                <rect key="frame" x="20" y="108" width="335" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y8W-PC-bhx">
+                                <rect key="frame" x="20" y="108" width="335" height="18.666666666666671"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tbp-NO-Px1">
-                                <rect key="frame" x="20" y="675" width="335" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tbp-NO-Px1">
+                                <rect key="frame" x="20" y="690.33333333333337" width="335" height="18.666666666666629"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.099754296243190765" green="0.14997085928916931" blue="0.18371099233627319" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Ier-Fp-LE6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="1JQ-6J-nGN"/>
                             <constraint firstItem="VMW-ez-JJR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1hu-jG-hZ9"/>
