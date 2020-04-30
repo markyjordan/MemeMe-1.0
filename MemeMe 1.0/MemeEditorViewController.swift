@@ -43,22 +43,6 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     override func viewDidLoad() {
         
         super.viewDidLoad()
-
-//        // set the delegates
-//        self.topTextField.delegate = memeTextFieldDelegate
-//        self.bottomTextField.delegate = memeTextFieldDelegate
-//
-//        // set default text in textfields
-//        topTextField.text = "TAP TO EDIT TOP"
-//        bottomTextField.text = "TAP TO EDIT BOTTOM"
-//
-//        // set default text attributes
-//        topTextField.defaultTextAttributes = memeTextAttributes
-//        bottomTextField.defaultTextAttributes = memeTextAttributes
-//
-//        // set textAlignment property of textfields to center
-//        topTextField.textAlignment = .center
-//        bottomTextField.textAlignment = .center
         
         initializeTextField(textField: topTextField, text: "TAP TO EDIT TOP TEXT")
         initializeTextField(textField: bottomTextField, text: "TAP TO EDIT BOTTOM TEXT")
@@ -207,7 +191,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     func saveMemedImage(memedImage: UIImage) {
         
         // generate the meme
-        let meme = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: photoImageView.image!, memedImage: memedImage)
+        let meme = Meme(topTextField: topTextField.text!, bottomTextField: bottomTextField.text!, originalImage: photoImageView.image!, memedImage: memedImage)
         self.meme = meme
     }
     
