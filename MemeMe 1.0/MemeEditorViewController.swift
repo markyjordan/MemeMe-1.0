@@ -23,7 +23,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var toolBar: UIToolbar!
     
-    var meme: Meme?
+    var meme: Meme!
     var memedImage = UIImage()
     
     let memeTextAttributes: [NSAttributedString.Key: Any] = [
@@ -43,7 +43,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
+
 //        // set the delegates
 //        self.topTextField.delegate = memeTextFieldDelegate
 //        self.bottomTextField.delegate = memeTextFieldDelegate
@@ -215,10 +215,13 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         
         // generate a memed image
         let memeToShare = generateMemedImage()
-        let activity = UIActivityViewController(activityItems: [memeToShare], applicationActivities: nil)
-        
-        activity.completionWithItemsHandler = {
-        
-        
+        let sharingActivity = UIActivityViewController(activityItems: [memeToShare], applicationActivities: nil)
+        sharingActivity.completionWithItemsHandler = { (activityType, completed, returnedItems, activityError) in
+            
+            if completed {
+                self.saveMemedImage(memedImage: memeToShare)
+            }
+        }
+        present(sharingActivity, animated: true, completion: nil)
     }
 }
