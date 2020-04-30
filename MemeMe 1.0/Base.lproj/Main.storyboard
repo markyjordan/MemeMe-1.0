@@ -72,7 +72,6 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9Fh-OW-YAE" secondAttribute="trailing" constant="20" id="GZD-Lz-oUj"/>
                             <constraint firstItem="Rfl-gq-d9E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MFV-tc-Jt9"/>
                             <constraint firstItem="9Fh-OW-YAE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="MeR-i2-Kt9"/>
-                            <constraint firstItem="Rfl-gq-d9E" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="44" id="Nvw-rW-Lji"/>
                             <constraint firstItem="Rfl-gq-d9E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NzP-yJ-xxR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Rfl-gq-d9E" secondAttribute="trailing" id="Se6-dT-5Us"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="H6s-s0-8VZ" secondAttribute="trailing" constant="20" id="Vyt-za-Ktt"/>
@@ -85,7 +84,6 @@
                             <constraint firstItem="Rfl-gq-d9E" firstAttribute="top" secondItem="9Ci-OY-P8q" secondAttribute="bottom" id="fwn-kL-bGJ"/>
                             <constraint firstItem="pL5-xb-WIf" firstAttribute="leading" secondItem="Rfl-gq-d9E" secondAttribute="leading" id="hOg-AG-f4m"/>
                             <constraint firstItem="pL5-xb-WIf" firstAttribute="leading" secondItem="9Ci-OY-P8q" secondAttribute="leading" id="lix-60-WVf"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Rfl-gq-d9E" secondAttribute="bottom" constant="44" id="pql-J5-tGo"/>
                             <constraint firstItem="pL5-xb-WIf" firstAttribute="top" secondItem="H6s-s0-8VZ" secondAttribute="bottom" constant="20" id="vvg-pD-UL3"/>
                             <constraint firstItem="9Fh-OW-YAE" firstAttribute="top" secondItem="9Ci-OY-P8q" secondAttribute="bottom" constant="20" id="ywJ-HT-sGp"/>
                         </constraints>
