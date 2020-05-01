@@ -59,8 +59,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
         
         // subscribe to keyboard notifications
-        subscribeToKeyboardWillShowNotifications()
-        subscribeToKeyboardWillHideNotifications()
+        subscribeToKeyboardNotifications()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -68,8 +67,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         super.viewWillDisappear(animated)
         
         // unsubsribe from keyboard notifications
-        unsubscribeFromKeyboardWillShowNotifications()
-        unsubscribeFromKeyboardWillHideNotifications()
+        unsubscribeFromKeyboardNotifications()
     }
     
     func initializeTextField(textField: UITextField, text: String) {
@@ -82,23 +80,15 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     // MARK: NSNotification Functions
     
     // observers
-    func subscribeToKeyboardWillShowNotifications() {
+    func subscribeToKeyboardNotifications() {
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-    }
-    
-    func subscribeToKeyboardWillHideNotifications() {
-        
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
-    func unsubscribeFromKeyboardWillShowNotifications() {
+    func unsubscribeFromKeyboardNotifications() {
         
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
-    }
-    
-    func unsubscribeFromKeyboardWillHideNotifications() {
-        
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
