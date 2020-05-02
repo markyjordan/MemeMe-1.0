@@ -13,15 +13,25 @@ import UIKit
 
 class MemeTextFieldsDelegate: NSObject, UITextFieldDelegate {
 
+    let defaultText: [String: String] = [
+        
+        "top": "TAP TO EDIT TOP TEXT",
+        "bottom": "TAP TO EDIT BOTTOM TEXT"
+    ]
+    
     // MARK: UITextFieldDelegate Methods
     
     // clear the default text when user taps the text field to begin editing
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        textField.text = ""
+        
+        if textField.text == defaultText["top"] || textField.text == defaultText["bottom"] {
+            textField.text = ""
+        }
     }
     
     // dismiss the keyboard when user presses return key
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
         textField.resignFirstResponder()
         return true
     }
