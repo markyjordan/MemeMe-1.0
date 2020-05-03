@@ -9,11 +9,9 @@
 import Foundation
 import UIKit
 
-// MARK: MemeEditorViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate
-
 class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
-    // MARK: Outlets/Properties
+    // MARK: - Outlets/Properties
     
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var topTextField: UITextField!
@@ -34,7 +32,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         NSAttributedString.Key.strokeWidth: NSNumber(-5.0)
     ]
     
-    // MARK: Text Field Delegate Objects
+    // MARK: - Text Field Delegate Objects
     
     let memeTextFieldDelegate = MemeTextFieldsDelegate()
     
@@ -77,7 +75,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         textField.textAlignment = .center
     }
     
-    // MARK: NSNotification Functions
+    // MARK: - NSNotification Functions
     
     // observers
     func subscribeToKeyboardNotifications() {
@@ -112,7 +110,28 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         return keyboardSize.cgRectValue.height
     }
     
-    // MARK: Image Picker
+    // MARK: - UIImagePickerControllerDelegate Methods
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let originalImage = info[.originalImage] as? UIImage {
+            
+            // set photoImageView to display the selected image
+            photoImageView.image = originalImage
+        }
+        dismiss(animated: true, completion: nil )
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func hideNavAndToolBars(isHidden: Bool) {
+        
+        navigationBar.isHidden = isHidden
+        toolBar.isHidden = isHidden
+    }
+    
+    // MARK: - Image Picker
     
     @IBAction func selectImageFromAlbum(_ sender: Any) {
         
@@ -144,27 +163,6 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         shareButton.isEnabled = true
         
         present(imagePickerVC, animated: true, completion: nil)
-    }
-    
-    // UIImagePickerControllerDelegate Methods
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let originalImage = info[.originalImage] as? UIImage {
-            
-            // set photoImageView to display the selected image
-            photoImageView.image = originalImage
-        }
-        dismiss(animated: true, completion: nil )
-    }
-    
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        dismiss(animated: true, completion: nil)
-    }
-    
-    func hideNavAndToolBars(isHidden: Bool) {
-        
-        navigationBar.isHidden = isHidden
-        toolBar.isHidden = isHidden
     }
     
     func generateMemedImage() -> UIImage {
