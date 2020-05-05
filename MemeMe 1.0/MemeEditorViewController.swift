@@ -26,10 +26,10 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     
     let memeTextAttributes: [NSAttributedString.Key: Any] = [
         
-        NSAttributedString.Key.font: UIFont(name: "Impact", size: 40)!,
-        NSAttributedString.Key.strokeColor: UIColor(white: 0.0, alpha: 1.0), // UIColor = black
-        NSAttributedString.Key.foregroundColor: UIColor(white: 1.0, alpha: 1.0), // UIColor = white
-        NSAttributedString.Key.strokeWidth: NSNumber(-5.0)
+        .font: UIFont(name: "Impact", size: 40)!,
+        .strokeColor: UIColor(white: 0.0, alpha: 1.0), // UIColor = black
+        .foregroundColor: UIColor(white: 1.0, alpha: 1.0), // UIColor = white
+        .strokeWidth: NSNumber(-5.0)
     ]
     
     // MARK: - Text Field Delegate Objects
